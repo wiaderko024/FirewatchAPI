@@ -9,6 +9,6 @@ public class FireTruck
 
     public FireTruck()
     {
-        FireTruckActions = new List<FireTruckAction>();
+        FireTruckActions = new HashSet<FireTruckAction>();
     }
 }

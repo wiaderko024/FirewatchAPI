@@ -10,6 +10,6 @@ public class Action
 
     public Action()
     {
-        FireTruckActions = new List<FireTruckAction>();
+        FireTruckActions = new HashSet<FireTruckAction>();
     }
 }
