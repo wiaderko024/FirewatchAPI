@@ -34,3 +34,4 @@ app.Run();
 // czy w dto trzeba inicjalizowac kolekcje
 // te configurations przenoszenie i tworzenie wlasnych wtf?
 // czy trzeba dopisywac te ktore nie maaja required max_length itp
+// czy w git sposob seeduje baze (na sztywno pk)
