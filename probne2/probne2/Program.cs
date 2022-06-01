@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IActionDbService, ActionDbService>();
+builder.Services.AddScoped<IFireTruckDbService, FireTruckDbService>();
 
 builder.Services.AddDbContext<FirewatchContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
@@ -38,3 +39,4 @@ app.Run();
 // czy trzeba dopisywac te ktore nie maaja required max_length itp
 // czy w git sposob seeduje baze (na sztywno pk)
 // czy nullable pola dawac ? w dto i entity
+// czy to okej endpoint do przypisania wozu?
