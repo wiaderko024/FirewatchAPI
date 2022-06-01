@@ -13,7 +13,7 @@ public class ActionDbService : IActionDbService
         _context = context;
     }
     
-    public async Task<ActionDTO> GetAction(int idAction)
+    public async Task<ActionDTO?> GetAction(int idAction)
     {
         return await _context.Actions.Include(e => e.FireTruckActions)
             .Where(e => e.IdAction == idAction)

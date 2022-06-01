@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using probne2.Entities;
 
@@ -11,9 +12,10 @@ using probne2.Entities;
 namespace probne2.Migrations
 {
     [DbContext(typeof(FirewatchContext))]
-    partial class FirewatchContextModelSnapshot : ModelSnapshot
+    [Migration("20220601201642_AddCfTables3")]
+    partial class AddCfTables3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

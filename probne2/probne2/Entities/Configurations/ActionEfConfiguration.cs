@@ -11,7 +11,6 @@ public class ActionEfConfiguration : IEntityTypeConfiguration<Action>
         builder.Property(e => e.IdAction).UseIdentityColumn();
 
         builder.Property(e => e.StartTime).IsRequired();
-        builder.Property(e => e.EndTime);
         builder.Property(e => e.NeedSpecialEquipment).IsRequired();
 
         builder.ToTable("Action");
