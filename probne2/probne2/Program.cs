@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using probne2.Entities;
+using probne2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IActionDbService, ActionDbService>();
 
 builder.Services.AddDbContext<FirewatchContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
@@ -35,3 +37,4 @@ app.Run();
 // te configurations przenoszenie i tworzenie wlasnych wtf?
 // czy trzeba dopisywac te ktore nie maaja required max_length itp
 // czy w git sposob seeduje baze (na sztywno pk)
+// czy nullable pola dawac ? w dto i entity
